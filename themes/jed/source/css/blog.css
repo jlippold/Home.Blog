@@ -1,0 +1,52 @@
+a.navbar-brand img
+{
+  color: white;
+  height: 51px;
+  margin-top: 5px;
+  filter: invert(100%);
+}
+
+
+div.ha-container div.btn-group {
+  min-width: 92px;
+}
+
+img.profile {
+  border-radius: 120px;
+}
+
+.profile-block {
+  background: rgba(49, 53, 57, 0.88) none repeat scroll 0 0;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  clear: both;
+}
+
+.article-info {
+  padding: 10px;
+}
+
+.article-info-block {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+.article-info-block h3 {
+  margin: 0
+}
+
+div.post-preview {
+  background: rgba(49, 53, 57, 0.88) none repeat scroll 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  padding: 0 20px;
+  max-height: 340px;
+}
+
+div.post-actions {
+  height: 70px;
+  padding: 10px 0;
+}
+

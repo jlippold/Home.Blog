@@ -1,0 +1,26 @@
+
+<div class='row'>
+	
+	<p class="lead blog-description">My journey from punk rock, to father, to teacher, to co-founder of a multi-million dollar corporation</p>
+
+ 	<% page.posts.each(function(post){ %>
+		<div class="post-preview">
+			<h3>
+				<a href="<%- url_for(post.path) %>">
+					<%= post.title %>
+				</a>
+			</h3>
+			<%- post.content %>
+		</div>
+		<div class="post-actions">
+			<a href="<%- url_for(post.path) %>" class="btn btn-default pull-right">Read More</a>
+		</div>
+	<% }) %>
+</div>
+
+<div id="page-nav">
+	<%- bs_paginator({
+	  prev_text: '<i class="fa fa-chevron-left"></i> Prev',
+	  next_text: 'Next <i class="fa fa-chevron-right"></i>'
+	}) %>
+</div>
