@@ -1,0 +1,23 @@
+<%- partial('partials/nav') %>
+<div class="container main-container">
+	<div class="row">
+		<div class="blog-main">
+			<div class="blog-post">
+				<div class="col-lg-8 col-md-12">
+					<h2>My Work</h2>
+					<p>
+						I'm a web developer by trade, but I also enjoy building mobile applications, home automation projects and learning new languages. Here are some examples of applications that I've created over the years.
+					</p>
+					<%- partial('partials/gallery') %>
+				</div>
+				<div class="col-lg-4 hidden-sm hidden-md">
+					<%- partial('partials/sidebar') %>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<%- page.content %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<%- partial('partials/footer') %>

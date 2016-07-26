@@ -1,26 +1,143 @@
+<section>
+	<%- partial('partials/nav') %>
+</section>
 
-<div class='row'>
+<section class="content-section video-section">
+	<video muted loop autoplay class="video" id="backgroundVideo">
+		<source src="https://jed.bz/video/cora.mp4" type="video/mp4">
+		<source src="https://jed.bz/video/cora.webm" type="video/webm">
+		<source src="https://jed.bz/video/cora.ogv" type="video/ogg"></video>
+	<div class="flex-center">
+		<p class="overlay">
+			My name is Jed Lippold.
+			<br />
+			I'm a father, developer, teacher
+			<br />
+			and entrepreneur.
+			<div class="read-more">
+				<a href="/about" class="btn btn-white btn-lg">Read more</a>
+			</div>	
+		</p>
+	</div>
+</section>
+
+<section class="content-section work-section">
+	<h1>Recent Work</h1>
+
+	<div class="row" style="padding: 20px;">
+
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+		    <div class="hovereffect">
+		        <img class="img-responsive" src="/public/blog/img/skedula.png" alt="">
+		        <div class="overlay">
+					<a class="info" href="/apps/datacation.html">
+						<div class="linktext">
+							Skedula
+						</div>
+					</a>
+				</div>
+		    </div>
+		</div>
+
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+		    <div class="hovereffect">
+		        <img class="img-responsive" src="/public/blog/img/dtv.png" alt="">
+		        <div class="overlay">
+					<a class="info" href="/apps/coco.html">
+						<div class="linktext">
+							Coco
+						</div>
+					</a>
+				</div>
+		    </div>
+		</div>
+
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+		    <div class="hovereffect">
+		        <img class="img-responsive" src="/public/blog/img/gesturePad.jpg" alt="">
+		        <div class="overlay">
+					<a class="info" href="/apps/gesturePad.html">
+						<div class="linktext">
+							gesturePad
+						</div>
+					</a>
+				</div>
+		    </div>
+		</div>
+
+	</div>
 	
-	<p class="lead blog-description">My journey from punk rock, to father, to teacher, to co-founder of a multi-million dollar corporation</p>
+	<div class="read-more">
+		<a href="/apps" class="btn btn-white btn-lg">Other apps</a>
+	</div>
+</section>
 
- 	<% page.posts.each(function(post){ %>
-		<div class="post-preview">
-			<h3>
-				<a href="<%- url_for(post.path) %>">
-					<%= post.title %>
+<section class="content-section blog-section">
+  <h1>Blog Posts</h1>
+  <div class='row'>
+  	<ul class="blog-posts">
+	 	<% page.posts.each(function(post, idx){ %>
+	 		<% if (idx < 3) { %>
+				<li>
+					<div class="post-date">
+						<p>
+							<%=full_date(post.date, 'DD')%>
+							<span><%=full_date(post.date, 'MMM')%></span>
+						</p>
+					</div>
+					<div class="post-content">
+						<h2>
+							<a href="<%- url_for(post.path) %>">
+								<%= post.title %>
+							</a>
+						</h2>
+						<p>
+							<%- post.excerpt %>
+						</p>
+					</div>
+				</li>
+			<% }%>
+		<% }) %>
+  	</ul>
+  </div>
+	<div class="read-more">
+		<a href="/blog" class="btn btn-black btn-lg">More thoughts</a>
+	</div>
+</section>
+
+<section class="content-section footer-section">
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			<p>&copy; 
+				<%= full_date(new Date(), 'YYYY') %> 
+				Jed Lippold 
+				<br />
+				<a href="https://github.com/jlippold/Home.Blog" target="_blank">
+					Source available on github
 				</a>
-			</h3>
-			<%- post.content %>
+			</p>
 		</div>
-		<div class="post-actions">
-			<a href="<%- url_for(post.path) %>" class="btn btn-default pull-right">Read More</a>
+		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+			<a title="github" target="_blank" href="https://github.com/jlippold"> 
+				<i class="icon icon-github-circled"></i>
+			</a>
 		</div>
-	<% }) %>
-</div>
+		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+			<a title="linkedin" target="_blank" href="https://www.linkedin.com/in/jedlippold">
+          		<i class="icon icon-linkedin"></i>
+            </a>
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+			<a title="twitter" target="_blank" href="https://twitter.com/treason">
+                <i class="icon icon-twitter"></i>
+            </a>
+		</div>
+	</div>
+</section>
 
-<div id="page-nav">
-	<%- bs_paginator({
-	  prev_text: '<i class="fa fa-chevron-left"></i> Prev',
-	  next_text: 'Next <i class="fa fa-chevron-right"></i>'
-	}) %>
-</div>
+<script>
+	document.addEventListener("DOMContentLoaded", function(event) { 
+		document.getElementById("navHome").className = "active";
+	});
+</script>
+

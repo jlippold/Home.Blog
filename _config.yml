@@ -12,8 +12,8 @@ timezone: America/New_York
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://jed.bz/blog
-root: /blog/
+url: https://jed.bz/
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -69,3 +69,13 @@ theme: jed
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+marked:
+  gfm: true
+  pedantic: false
+  sanitize: false
+  tables: true
+  breaks: true
+  smartLists: true
+  smartypants: false
+

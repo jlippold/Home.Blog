@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="https://jed.bz/favicon.png">
+    <link rel="icon" href="https://jed.bz/favicon.png">
     <meta name="description" content="Jed Lippolds Blog">
     <meta name="author" content="Jed Lippold">
     <link rel="icon" href="https://jed.bz/favicon.ico">
@@ -15,27 +15,13 @@
     <link href="https://jed.bz/public/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://jed.bz/public/css/custom.css" rel="stylesheet">
     <link href="https://jed.bz/public/css/font.css" rel="stylesheet">
-    <link href="/blog/css/blog.css" rel="stylesheet">
+    <link href="/public/blog/css/blog.css" rel="stylesheet">
 
   </head>
 
   <body>
 
-  	<%- partial('partials/nav') %>
-
-    <div class="container" style="padding-top: 70px">
-
-      <div class="row">
-
-        <div class="col-sm-8 blog-main">
-        	<%- body %>
-        </div>
-        <%- partial('partials/sidebar') %>
-
-      </div>
-
-    </div>
-
-    <%- partial('partials/footer') %>
+    <%- body %>
+    
   </body>
 </html>

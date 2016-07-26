@@ -1,0 +1,33 @@
+<%- partial('partials/nav') %>
+<div class="container" style="padding-top: 70px">
+  <div class="row">
+    <div class="blog-main">
+		<h2>Blog Posts</h2>
+		<p>&nbsp;</p>
+		<ul class="blog-posts list">
+	 	<% site.posts.each(function(post, idx){ %>
+				<li>
+					<div class="post-date">
+						<p>
+							<%=full_date(post.date, 'DD')%>
+							<span><%=full_date(post.date, 'MMM')%></span>
+						</p>
+					</div>
+					<div class="post-content">
+						<h3>
+							<a href="<%- url_for(post.path) %>">
+								<%= post.title %>
+							</a>
+						</h3>
+						<p>
+							<%- post.excerpt %>
+						</p>
+					</div>
+				</li>
+		<% }) %>
+		</ul>
+		
+    </div>
+  </div>
+</div>
+<%- partial('partials/footer') %> 

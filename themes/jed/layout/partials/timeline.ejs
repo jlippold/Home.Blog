@@ -1,0 +1,46 @@
+<% 
+  var timeline = [{
+    date: "Sept 2015",
+    range: "Sept 2015 - Present",
+    title: "VP of Engineering, IO Education",
+    content: "CaseNex was aquired by IO Education, and now I am helping to lead the Engineering Team develop even more applications."
+  }, {
+    date: "Sept 2012",
+    range: "Sept 2012 - Sept 2015",
+    title: "Chief Technical Officer, CaseNex",
+    content: "With Datacation now being the largest and most successful division of CaseNex, I lead an engineering team with over 20 developers. During my time, I designed and lead multiple SAAS applications and scaled skedula and pupilpath to serve over a million sessions per month. "
+  }, {
+    date: "Sept 2009",
+    range: "Sept 2009 - Sept 2012",
+    title: "Co-Founder, Datacation",
+    content: "After leaving teaching, co-founded a startup named Datacation which specialized in educational technology software. Primarily Skedula.com and PupilPath.com"
+  }, {
+    date: "Sept 2008",
+    range: "Sept 2008 - Sept 2009",
+    title: "Professor, College of Saint Rose",
+    content: "Remote professor teaching courses in educational technologies. CITE, was a college program offered to help aspiring teachers get certified and licensed. "
+  }, {
+    date: "Sept 2003",
+    range: "Sept 2003 - Sept 2009",
+    title: "Teacher, Herbert H Lehman High School",
+    content: "From school aide, to para-professional, to teacher, to Program Chairman. While at Lehman, I learned the inner-workings of New York City classrooms and data systems, then created the very first version of Skedula"
+  }];
+%>
+
+<ul id='timeline'>
+  <% timeline.forEach(function(item, idx) { %>
+    <li class='work'>
+      <div class="relative">
+        <span class='date'><%=item.date%></span>
+        <span class='circle'></span>
+      </div>
+      <div class='content'>
+        <h4><%=item.title%></h4>
+        <div class='range'><%=item.range%></div>
+        <div class='description'><%-item.content%></div>
+      </div>
+    </li>
+  <% }); %>
+</ul>
+
+<br />
