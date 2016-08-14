@@ -12,7 +12,7 @@ This is a project that I use in my home everyday. It's a node.js mash-up of many
 
 <br />
 
-![/public/blog/img/Home.Automation.png](/public/blog/img/Home.Automation.png)
+![/pub/blog/img/Home.Automation.png](/pub/blog/img/Home.Automation.png)
 
 <br />
 

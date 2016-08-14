@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'league gothic';
-  src: url('/public/blog/fonts/leaguegothic-regular-webfont.eot'); /* IE9 Compat Modes */
-  src: url('/public/blog/fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/public/blog/fonts/leaguegothic-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-       url('/public/blog/fonts/leaguegothic-regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('/public/blog/fonts/leaguegothic-regular-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  src: url('/pub/blog/fonts/leaguegothic-regular-webfont.eot'); /* IE9 Compat Modes */
+  src: url('/pub/blog/fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/pub/blog/fonts/leaguegothic-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/pub/blog/fonts/leaguegothic-regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/pub/blog/fonts/leaguegothic-regular-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 body {
@@ -129,7 +129,7 @@ img.profile {
 }
 
 div.profile {
-  background: rgba(0, 0, 0, 0) url("/public/blog/img/profile.jpg") no-repeat scroll 135% 51% / 104% auto;
+  background: rgba(0, 0, 0, 0) url("/pub/blog/img/profile.jpg") no-repeat scroll 135% 51% / 104% auto;
   border-radius: 89px;
   height: 165px;
   margin-left: 25px;

@@ -21,13 +21,13 @@ Robert Leder the principal, Tanya Lippold the program chair, and Sony Grandoit t
 
 The first iteration was simplistic and crude, but it solved a number of problems. It was only a couple of forms, which updated a few tables. Here's some stuff I found from my files
 
->[![image](/public/blog/img/TN_IMG_2543.JPG)](/public/blog/img/IMG_2543.JPG) [![image](/public/blog/img/TN_IMG_2544.JPG)](/public/blog/img/IMG_2544.JPG) 
+>[![image](/pub/blog/img/TN_IMG_2543.JPG)](/pub/blog/img/IMG_2543.JPG) [![image](/pub/blog/img/TN_IMG_2544.JPG)](/pub/blog/img/IMG_2544.JPG) 
 > _Design Plans_
 
->[![image](/public/blog/img/TN_IMG_2548.JPG)](/public/blog/img/IMG_2548.JPG) [![image](/public/blog/img/TN_IMG_2549.JPG)](/public/blog/img/IMG_2549.JPG) [![image](/public/blog/img/TN_IMG_2547.JPG)](/public/blog/img/IMG_2547.JPG)
+>[![image](/pub/blog/img/TN_IMG_2548.JPG)](/pub/blog/img/IMG_2548.JPG) [![image](/pub/blog/img/TN_IMG_2549.JPG)](/pub/blog/img/IMG_2549.JPG) [![image](/pub/blog/img/TN_IMG_2547.JPG)](/pub/blog/img/IMG_2547.JPG)
 > _Pilot handouts_ 
 
->[![image](/public/blog/img/TN_IMG_2545.JPG)](/public/blog/img/IMG_2545.JPG) [![image](/public/blog/img/TN_IMG_2546.JPG)](/public/blog/img/IMG_2546.JPG) [![image](/public/blog/img/TN_IMG_2550.JPG)](/public/blog/img/IMG_2550.JPG) [![image](/public/blog/img/TN_IMG_2551.JPG)](/public/blog/img/IMG_2551.JPG) 
+>[![image](/pub/blog/img/TN_IMG_2545.JPG)](/pub/blog/img/IMG_2545.JPG) [![image](/pub/blog/img/TN_IMG_2546.JPG)](/pub/blog/img/IMG_2546.JPG) [![image](/pub/blog/img/TN_IMG_2550.JPG)](/pub/blog/img/IMG_2550.JPG) [![image](/pub/blog/img/TN_IMG_2551.JPG)](/pub/blog/img/IMG_2551.JPG) 
 > _Misc. Documentation_
 
 The server architecture was a MSAccess 97 database, accessible via a windows UNC path. The application code was written in VBA. We had about 10 users, who accessed the linked tables via an MSAccess front end. 
@@ -53,7 +53,7 @@ Here's just some of the features:
  - Reporting
  - Transcripts
 
- >[![image](/public/blog/img/TN_skd_00003.png)](/public/blog/img/skd_00003.png) [![image](/public/blog/img/TN_skd_00006.png)](/public/blog/img/skd_00006.png) [![image](/public/blog/img/TN_skd_00010.png)](/public/blog/img/skd_00010.png) [![image](/public/blog/img/TN_skd_00012.png)](/public/blog/img/skd_00012.png) [![image](/public/blog/img/TN_skd_00014.png)](/public/blog/img/skd_00014.png) [![image](/public/blog/img/TN_skd_00015.png)](/public/blog/img/skd_00015.png) [![image](/public/blog/img/TN_skd_00016.png)](/public/blog/img/skd_00016.png) [![image](/public/blog/img/TN_skd_00017.png)](/public/blog/img/skd_00017.png) [![image](/public/blog/img/TN_skd_00018.png)](/public/blog/img/skd_00018.png) [![image](/public/blog/img/TN_skd_00019.png)](/public/blog/img/skd_00019.png) 
+ >[![image](/pub/blog/img/TN_skd_00003.png)](/pub/blog/img/skd_00003.png) [![image](/pub/blog/img/TN_skd_00006.png)](/pub/blog/img/skd_00006.png) [![image](/pub/blog/img/TN_skd_00010.png)](/pub/blog/img/skd_00010.png) [![image](/pub/blog/img/TN_skd_00012.png)](/pub/blog/img/skd_00012.png) [![image](/pub/blog/img/TN_skd_00014.png)](/pub/blog/img/skd_00014.png) [![image](/pub/blog/img/TN_skd_00015.png)](/pub/blog/img/skd_00015.png) [![image](/pub/blog/img/TN_skd_00016.png)](/pub/blog/img/skd_00016.png) [![image](/pub/blog/img/TN_skd_00017.png)](/pub/blog/img/skd_00017.png) [![image](/pub/blog/img/TN_skd_00018.png)](/pub/blog/img/skd_00018.png) [![image](/pub/blog/img/TN_skd_00019.png)](/pub/blog/img/skd_00019.png) 
 > _Screenshots_
 
 There were also some experimental features that I loved to build. For example, the touch screen kiosk. Students were able to print their schedules, report cards and transcripts from a touch screen. This was awesome for me, because students frequently came to my office for new printouts. 

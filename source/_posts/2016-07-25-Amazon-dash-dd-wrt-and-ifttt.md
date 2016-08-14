@@ -11,7 +11,7 @@ I snagged some amazon dash buttons on Prime day for $0.99 a piece. I saw some ot
 
 <!-- more --> 
 <div style="float: left; margin: 12px">
-	![dash button](/public/blog/img/dash.jpg)
+	![dash button](/pub/blog/img/dash.jpg)
 <div>
 Once my amazon dash arrived in the mail, I went searching online for hacking methods and I found this [gem](https://medium.com/@edwardbenson/how-i-hacked-amazon-s-5-wifi-button-to-track-baby-data-794214b0bdd8). That lazy dad's approach was pretty sweet, but it's written in python, and I'm a lazier dad. Since I'm a javascript guy, I immediately searched and found this [node variation](https://github.com/hortinstein/node-dash-button) of the same python script. 
 
