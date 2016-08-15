@@ -109,27 +109,23 @@
 
 <section class="content-section footer-section">
 	<div class="row">
-		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+		<div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
 			<p>&copy; 
 				<%= full_date(new Date(), 'YYYY') %> 
 				Jed Lippold 
-				<br />
-				<a href="https://github.com/jlippold/Home.Blog" target="_blank">
-					Source available on github
-				</a>
 			</p>
 		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
 			<a title="github" target="_blank" href="https://github.com/jlippold"> 
 				<i class="icon icon-github-circled"></i>
 			</a>
 		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
 			<a title="linkedin" target="_blank" href="https://www.linkedin.com/in/jedlippold">
           		<i class="icon icon-linkedin"></i>
             </a>
 		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
 			<a title="twitter" target="_blank" href="https://twitter.com/treason">
                 <i class="icon icon-twitter"></i>
             </a>
@@ -143,7 +139,6 @@
 	document.addEventListener("DOMContentLoaded", function(event) { 
 		document.getElementById("navHome").className = "active";
 		var isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
-
 		if (isIOS) {
 		    // Init CanvasVideoPlayer here
 		    document.getElementById("canvas").style.display = "block";
@@ -159,9 +154,6 @@
 		        pauseOnClick: false,
 		        audio: false
 		    });
-		}
-		else {
-		    // Use HTML5 video
 		}
 	});
 

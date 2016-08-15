@@ -180,6 +180,19 @@ footer p {
   div.blog-main {
     padding: 20px;
   }
+
+  section.work-section h1, section.blog-section h1 {
+    font-size: 15vw;
+  }
+
+  section.blog-section h2 {
+    font-size: 24px;
+  }
+
+  ul.blog-posts {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1250px) {
@@ -229,6 +242,10 @@ ul.list li {
 }
 ul.list div.post-date {
   border: 0px transparent !important;
+}
+
+ul.blog-posts {
+  padding-left: 40px;
 }
 
 ul.blog-posts li div.post-content {
@@ -353,6 +370,7 @@ p.overlay {
 .blog-section h1 {
   font-size: 10vw;
 }
+
 .footer-section {
   background: #171f26 none repeat scroll 0 0;
   height: 100px;
@@ -362,10 +380,11 @@ p.overlay {
   padding-top: 28px;
 }
 .footer-section i {
-  font-size: 32px;
+  font-size: 24px;
+  color: #c8c8c8;
 }
 .footer-section p {
-  line-height: 18px;
+  line-height: 23px;
   margin-left: 26px;
   margin-top: 8px;
 }
@@ -376,11 +395,6 @@ p.overlay {
   background: transparent;
 }
 
-.btn-white:hover {
-  border: 1px solid white;
-  color: #000;
-}
-
 .btn-black {
   border: 1px solid black;
   background: transparent;
@@ -388,8 +402,33 @@ p.overlay {
 }
 
 .btn-black:hover {
-  border: 1px solid black;
-  color: white;
+  border: 1px solid white;
+  color: black;
+}
+
+
+.btn-white {
+  display: inline-block;
+  width: 200px;
+  padding: 8px;
+  color: #fff;
+  border: 2px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out,
+              border-color 0.2s ease-out;
+}
+.btn-white:hover,
+.btn-white:active {
+  background-color: #fff; /* fallback */
+  background-color: rgba(255, 255, 255, 0.4);
+  border-color: #fff; /* fallback */
+  border-color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: background-color 0.3s ease-in, border-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in,
+              border-color 0.3s ease-in;
 }
 
 div.read-more {
@@ -405,6 +444,10 @@ div.read-more {
 
   section.video-section {
     margin-top: 52px;
+  }
+
+  div.flex-center p.overlay {
+    padding-top: 60px;
   }
   
 }
@@ -426,6 +469,7 @@ div.read-more {
   position: relative;
   text-align: center;
   cursor: default;
+  margin-bottom: 20px;
 }
 
 .hovereffect .overlay {
@@ -590,4 +634,67 @@ body .gist article {
   background-color: #191919; }
 .gist .markdown-body .highlight pre, .gist .markdown-body pre {
   background-color: #323232 !important;
+}
+
+
+/* 
+  responsive nav fix 
+  http://stackoverflow.com/questions/23535289/bootstrap-3-disable-navbar-collapse
+*/
+
+.navbar-header-menu {
+    float: left;
+}
+.navbar-header-menu > .navbar-nav {
+    float: left;
+    margin: 0;
+}
+.navbar-header-menu > .navbar-nav > li {
+    float: left;
+}
+.navbar-header-menu > .navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.navbar-header-menu > .navbar-nav .open .dropdown-menu {
+    position: absolute;
+    float: left;
+    width: auto;
+    margin-top: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+.navbar-header-menu > .navbar-form {
+    float: left;
+    width: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.navbar-header-menu > .navbar-form > .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+.navbar-header-menu > .navbar-left {
+    float: left;
+}
+.navbar-header-menu > .navbar-right {
+    float: right !important;
+}
+.navbar-header-menu > *.navbar-right:last-child {
+    margin-right: -15px !important;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-header-menu { 
+    display: none; 
+  }
 }
