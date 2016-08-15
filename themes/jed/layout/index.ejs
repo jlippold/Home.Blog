@@ -137,7 +137,7 @@
 
 <script>
 	document.addEventListener("DOMContentLoaded", function(event) { 
-		document.getElementById("navHome").className = "active";
+		document.querySelectorAll(".navHome")[0].className = "active";
 		var isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
 		if (isIOS) {
 		    // Init CanvasVideoPlayer here
