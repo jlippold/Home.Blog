@@ -7,9 +7,10 @@
        url('/pub/blog/fonts/leaguegothic-regular-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
-body {
-  background-color: black;
+html {
+  overflow-x: hidden;
 }
+
 
 div.main-container {
   padding-top: 70px;
@@ -285,7 +286,7 @@ ul.blog-posts li div.post-content {
 body {
   overflow-x: hidden;
 }
-.video {
+.video, .canvas {
     width: 100%;
 }
 

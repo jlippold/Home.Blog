@@ -6,7 +6,9 @@
 	<video muted loop autoplay class="video" id="backgroundVideo">
 		<source src="https://jed.bz/video/cora.mp4" type="video/mp4">
 		<source src="https://jed.bz/video/cora.webm" type="video/webm">
-		<source src="https://jed.bz/video/cora.ogv" type="video/ogg"></video>
+		<source src="https://jed.bz/video/cora.ogv" type="video/ogg">
+	</video>
+	<canvas class="canvas" id="canvas" style="display: none"></canvas>
 	<div class="flex-center">
 		<p class="overlay">
 			My name is Jed Lippold.
@@ -135,9 +137,35 @@
 	</div>
 </section>
 
+<script type="text/javascript" src="/pub/blog/canvas-video-player.js" ></script>
+
 <script>
 	document.addEventListener("DOMContentLoaded", function(event) { 
 		document.getElementById("navHome").className = "active";
+		var isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
+
+		if (isIOS) {
+		    // Init CanvasVideoPlayer here
+		    document.getElementById("canvas").style.display = "block";
+		    new CanvasVideoPlayer({
+		        videoSelector: '.video',
+		        canvasSelector: '.canvas',
+		        timelineSelector: false,
+		        framesPerSecond: 29,
+		        audio: false,
+		        resetOnLastFrame: true,
+		        autoplay: true,
+		        loop: true,
+		        pauseOnClick: false,
+		        audio: false
+		    });
+		}
+		else {
+		    // Use HTML5 video
+		}
 	});
+
+
+
 </script>
 
