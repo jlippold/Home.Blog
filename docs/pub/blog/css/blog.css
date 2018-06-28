@@ -227,6 +227,7 @@ ul.blog-posts li {
   width: 100%;
   border-top: 1px solid #ccc;
   padding: 20px 0;
+  clear: both;
 }
 ul.blog-posts li a {
   color: black;
