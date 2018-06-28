@@ -1,0 +1,337 @@
+@import url('//fonts.googleapis.com/css?family=Bangers');
+
+body {
+  background: #485563; 
+  background: -webkit-linear-gradient(to left, #485563 , #29323c);
+  background: linear-gradient(to left, #485563 , #29323c);
+}
+
+.navbar {
+  background:rgba(49,53,57,0.95) none repeat scroll 0 0;
+  background-image:none
+}
+
+a.navbar-brand {
+  font-size:4.8em;
+  margin-top:-18px;
+  margin-left:-27px
+}
+
+.logo {
+  height: 30px;
+  margin-left: 10px;
+  width: auto;
+}
+
+.logo i {
+  font-size: 2em;
+  line-height: 0;
+  margin-left: -16px;
+}
+
+#loader {
+  padding-top: 30px;
+  margin-right: 6px;
+}
+#loader object {
+  height: 30px;
+}
+
+.navbar-link {
+  padding-top: 34px;
+  margin-right: 6px;
+}
+
+
+#root.menu a.list-group-item:focus h4 span.icon
+{
+  -moz-animation:spin 2s infinite linear;
+  -o-animation:spin 2s infinite linear;
+  -webkit-animation:spin 2s infinite linear;
+  animation:spin 2s infinite linear;
+  display:inline-block
+}
+
+#root.menu a.list-group-item
+{
+  background:rgba(50,56,62,0.9) none repeat scroll 0 0
+}
+
+#root.menu a.list-group-item:focus h4 span.icon::before
+{
+  content:"\e818"!important
+}
+
+
+
+#error .wrap {
+  padding: 5em 0.5em;
+  margin: 0 auto;
+}
+
+#error h1 {
+  text-align: center;
+  font-weight: normal;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-size: 12vw;
+  font-family: 'Bangers', cursive;
+  margin: auto;
+  text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.7);
+  -moz-transform: skew(0, -6.7deg);
+  -ms-transform: skew(0, -6.7deg);
+  -webkit-transform: skew(0, -6.7deg);
+  transform: skew(0, -6.7deg);
+  -moz-transition-property: font-size;
+  -o-transition-property: font-size;
+  -webkit-transition-property: font-size;
+  transition-property: font-size;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+@media screen and (max-width: 50em) {
+  #error h1 {
+    font-size: 20vw;
+  }
+}
+
+#error p, #error i {
+  font-family: 'Bangers', cursive;
+  text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.7);
+  text-align: center;
+  font-weight: normal;
+  color: #fff;
+  font-size: 6vw;
+}
+#error i {
+  text-align: right;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+#login .form-signin input[type="text"]
+{
+  margin-bottom:5px;
+  border-bottom-left-radius:0;
+  border-bottom-right-radius:0
+}
+
+#login .form-signin input[type="password"]
+{
+  margin-bottom:10px;
+  border-top-left-radius:0;
+  border-top-right-radius:0
+}
+
+#login .form-signin .form-control
+{
+  position:relative;
+  border:1px solid #ccc;
+  font-size:16px;
+  font-family:'Open Sans',Arial,Helvetica,sans-serif;
+  height:auto;
+  padding:10px;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box
+}
+
+#login
+{
+  padding-top:100px
+}
+
+#login .panel
+{
+  margin-bottom:20px;
+  background-color:rgba(255,255,255,0.25);
+  border-radius:4px;
+  -webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);
+  box-shadow:0 1px 1px rgba(0,0,0,.05)
+}
+
+#login .btn-success,#login .btn-success:hover
+{
+  background-image:none;
+  border-color:transparent;
+  text-shadow:none
+}
+
+#login .logo
+{
+  color:#fff;
+  font-size:6em
+}
+
+.btn-circle
+{
+  width:70px;
+  height:70px;
+  padding:10px 16px;
+  font-size:24px;
+  line-height:1.33;
+  border-radius:35px
+}
+
+#login .icon-jed
+{
+  font-size:2em;
+  line-height:0;
+  margin-left:-16px
+}
+
+#login .user-row
+{
+  text-align:center;
+  padding:6px
+}
+
+#login .remember
+{
+  display: block;
+  text-align:right;
+  padding:6px
+}
+
+@-moz-keyframes spin {
+  0%
+  {
+    -moz-transform:rotate(0deg);
+    -o-transform:rotate(0deg);
+    -webkit-transform:rotate(0deg);
+    transform:rotate(0deg)
+  }
+  
+  100%
+  {
+    -moz-transform:rotate(359deg);
+    -o-transform:rotate(359deg);
+    -webkit-transform:rotate(359deg);
+    transform:rotate(359deg)
+  }
+}
+
+@-webkit-keyframes spin {
+  0%
+  {
+    -moz-transform:rotate(0deg);
+    -o-transform:rotate(0deg);
+    -webkit-transform:rotate(0deg);
+    transform:rotate(0deg)
+  }
+  
+  100%
+  {
+    -moz-transform:rotate(359deg);
+    -o-transform:rotate(359deg);
+    -webkit-transform:rotate(359deg);
+    transform:rotate(359deg)
+  }
+}
+
+@-o-keyframes spin {
+  0%
+  {
+    -moz-transform:rotate(0deg);
+    -o-transform:rotate(0deg);
+    -webkit-transform:rotate(0deg);
+    transform:rotate(0deg)
+  }
+  
+  100%
+  {
+    -moz-transform:rotate(359deg);
+    -o-transform:rotate(359deg);
+    -webkit-transform:rotate(359deg);
+    transform:rotate(359deg)
+  }
+}
+
+@-ms-keyframes spin {
+  0%
+  {
+    -moz-transform:rotate(0deg);
+    -o-transform:rotate(0deg);
+    -webkit-transform:rotate(0deg);
+    transform:rotate(0deg)
+  }
+  
+  100%
+  {
+    -moz-transform:rotate(359deg);
+    -o-transform:rotate(359deg);
+    -webkit-transform:rotate(359deg);
+    transform:rotate(359deg)
+  }
+}
+
+@keyframes spin {
+  0%
+  {
+    -moz-transform:rotate(0deg);
+    -o-transform:rotate(0deg);
+    -webkit-transform:rotate(0deg);
+    transform:rotate(0deg)
+  }
+  
+  100%
+  {
+    -moz-transform:rotate(359deg);
+    -o-transform:rotate(359deg);
+    -webkit-transform:rotate(359deg);
+    transform:rotate(359deg)
+  }
+}
+
+
+div.ha-container {
+  display: flex; 
+  flex-wrap: nowrap;
+}
+
+a.list-group-item.heading {
+  background-color: rgba(2, 2, 2, 0.5) !important;
+  height: 34px;
+}
+
+a.list-group-item.heading h4 {
+  line-height: 10px;
+} 
+
+h4.ha-header {
+  max-height: 40px;
+  text-overflow: ellipsis; 
+  overflow: hidden; 
+  white-space: nowrap; 
+  line-height: 37px; 
+  width: 100%;
+  font-weight: normal;
+}
+
+h4.ha-header span.icon {
+  margin-right: 8px; 
+  float: left; 
+  background: linear-gradient(#020202, #101112 40%, #141618);
+  border-radius: 38px;
+  color: white;
+  font-size: 20px;
+  padding-left: 4px;
+  line-height: 39px;
+  height: 38px;
+  margin-left: 0;
+  width: 38px;
+}
+
+div.ha-container span.icon.on { 
+  background: linear-gradient(#78cc78, #62c462 60%, #53be53) !important;
+}
+
+div.ha-container div.btn-group {
+  min-width: 92px;
+}
+
