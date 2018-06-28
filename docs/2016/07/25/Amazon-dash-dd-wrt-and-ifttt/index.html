@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="Jed Lippolds Blog">
+    <meta name="author" content="Jed Lippold">
+    
+
+    <title>Jed.bz</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/pub/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/pub/css/custom.css" rel="stylesheet">
+    <link href="/pub/css/font.css" rel="stylesheet">
+    <link href="/pub/blog/css/blog.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <input type="checkbox" id="navbar-toggle-cbox">
+    <div class="navbar-header">
+      <label for="navbar-toggle-cbox" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </label>
+      <a class="navbar-brand" href="/">
+        <img src="/pub/blog/img/logo.svg" />
+      </a>
+      <div class="navbar-header-menu">
+        <ul class="nav navbar-nav">
+          <li class="navApps">
+            <a href="/apps">Work</a>
+          </li>
+          <li class="navBlog">
+            <a href="/blog">Blog</a>
+          </li>
+          <li class="navAbout">
+            <a href="/about">About</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="navHome">
+          <a href="/">Home</a>
+        </li>
+        <li class="navApps">
+          <a href="/apps">Work</a>
+        </li>
+        <li class="navBlog">
+          <a href="/blog">Blog</a>
+        </li>
+        <li class="navAbout">
+          <a href="/about">About</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="/admin">Admin</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container" style="padding-top: 70px">
+  <div class="row">
+    <div class="blog-main">
+
+		<div class="blog-post">
+			
+			
+
+<div class="blog-sidebar">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            
+            <div class="profile">
+            </div>
+            <h4 id="name">Jed Lippold</h2>
+            <h5 id="title">Father, Developer, Teacher &amp; Entrepreneur</h3>
+            <span id="location">
+              <i class="fa fa-map-marker"></i>
+              Pennsylvania / New York
+            </span>
+            <a id="follow" target="_blank" href="#"></a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block" style="border-right: 1px solid rgba(255, 255, 255, 0.1);">
+                <h3>3</h3>
+                <span>posts</span>
+            </div>
+            <div class="article-info-block">
+                <h3>5</h3>
+                <span>tags</span>
+            </div>
+            <div class="clear clearfix"></div>
+        </div>
+        <div class="profile-block social-links">
+          <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <a href="https://github.com/jlippold" target="_blank" title="github">
+                    <i class="icon icon-github-circled"></i>
+                </a>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <a href="https://www.linkedin.com/in/jedlippold" target="_blank" title="linkedin">
+                    <i class="icon icon-linkedin"></i>
+                </a>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <a href="https://twitter.com/treason" target="_blank" title="twitter">
+                    <i class="icon icon-twitter"></i>
+                </a>
+              </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+			<h2 class="blog-post-title">
+				Amazon Dash, DD-WRT and IFTTT
+			</h2>
+			<p class="blog-post-meta">
+				2016-07-25  by Jed Lippold
+			</p>
+			
+			<p>I snagged some amazon dash buttons on Prime day for $0.99 a piece. I saw some other hacks that required a full time server, here&#39;s a way to do it with only dd-wrt.</p>
+<a id="more"></a> 
+<p><div style="float: left; margin: 12px"><br>    <img src="/pub/blog/img/dash.jpg" alt="dash button"></div></p>
+<p><div><br>Once my amazon dash arrived in the mail, I went searching online for hacking methods and I found this <a href="https://medium.com/@edwardbenson/how-i-hacked-amazon-s-5-wifi-button-to-track-baby-data-794214b0bdd8" target="_blank" rel="noopener">gem</a>. That lazy dad&#39;s approach was pretty sweet, but it&#39;s written in python, and I&#39;m a lazier dad. Since I&#39;m a javascript guy, I immediately searched and found this <a href="https://github.com/hortinstein/node-dash-button" target="_blank" rel="noopener">node variation</a> of the same python script. </div></p>
+<p>The main problem is that both the python and node script require libpcap installed on the server to sniff the ARP probes made by the dash. I didn&#39;t really want yet another process running on my home server, so I thought I could reuse <a href="http://www.dd-wrt.com/site/index" target="_blank" rel="noopener">DD-WRT</a> to do the lifting for me. </p>
+<h4 id="How-the-Dash-works"><a href="#How-the-Dash-works" class="headerlink" title="How the Dash works"></a>How the Dash works</h4><p>Each time the dash button is pressed, it turns on, connects to the wifi network, which makes a purchase request to amazon, then turns itself off. Originally, I thought I could re-route the requests to my local server instead. But since the requests are SSL with end to end encryption, it makes them nearly impossible to replay.</p>
+<p>So instead, I went with the low tech solution. When the dash joins my network, fire off a request to some other url.</p>
+<h4 id="Enable-Logging"><a href="#Enable-Logging" class="headerlink" title="Enable Logging"></a>Enable Logging</h4><p>Step one is to enable logging on the router. So under Services, System Log, enable <code>Syslogd</code></p>
+<h4 id="Grep-the-logs"><a href="#Grep-the-logs" class="headerlink" title="Grep the logs"></a>Grep the logs</h4><blockquote>
+<p><em>Disclaimer</em> - This is how the logs look on <em>my router</em>, the logs on your router may be different because you may have a different network configuration, so here&#39;s all the steps I took so you can reproduce in your environment.</p>
+</blockquote>
+<p>Now that logging is enabled. SSH or telnet to the router, and tail the logs to look for the dash button.</p>
+<p><code>root@DD-WRT:~# tail /tmp/var/log/messages -n15 -f</code></p>
+<p>When you tail this file then press the dash button you should see an output similar to this</p>
+<script src="https://gist.github.com/c92db0f7bdf78d799c6f2a28c172655c.js"></script>
+
+<p>It looks like when a new client connects to the wifi, a line is added to the log that contains this:</p>
+<p><code>SRC=0.0.0.0 DST=255.255.255.255</code></p>
+<p>So if we grep for that string</p>
+<p><code>tail /tmp/var/log/messages -n15 -f | grep &quot;SRC=0.0.0.0 DST=255.255.255.255&quot;</code></p>
+<p>We should only see new connections to your network. </p>
+<script src="https://gist.github.com/5bc93470f99a952458255cbcad8cabc5.js"></script>
+
+<p>You can also test this by toggling wifi on/off from your mobile device</p>
+<p>In that string, after the <code>ff:ff:ff:ff:ff:ff</code> and before the <code>:08:00</code> you will find the mac address of the dash. </p>
+<p>In my example, the mac address of my dash is <code>d0:03:4b:9e:69:5c</code></p>
+<h4 id="Grep-the-log-and-make-request"><a href="#Grep-the-log-and-make-request" class="headerlink" title="Grep the log and make request"></a>Grep the log and make request</h4><p>Now that we know what we are looking for, lets create a script to parse the log file, and send a request to a server of our choosing when the button is pressed</p>
+<script src="https://gist.github.com/a36b3767e2f5a98defa87277380726c5.js"></script>
+
+<p>So the script is first killing the <code>tail</code> process if its running. This is important because the DDWRT docs state that a startup script can be called multiple times, so this insures one instance. Then, for each line in the log, if the line contains our search string of <code>ff:ff:ff:ff:ff:ff:44:65:0d:b2:a2:c6:08:00</code> then tell <code>wget</code> to make a web request to <code>http://192.168.1.13:3000/dash/playdoe</code> which is a bogus url, but it demonstrates the point.</p>
+<p>To make this script run on on dd-wrt, go to Administration &gt; Commands, then paste the script into the <code>Command Shell</code> text area. Click <code>Save Startup</code>, then reboot the router.</p>
+<p>Now we should be making requests to our own server when the dash button is pressed :)</p>
+<p>I imagine a similar script could be used on OpenWRT or tomato, but I don&#39;t have those anymore.</p>
+<h4 id="Integrate-IFTTT"><a href="#Integrate-IFTTT" class="headerlink" title="Integrate IFTTT"></a>Integrate IFTTT</h4><p>I understand that not everyone has a home server ready to intercept these dash buttons. So, lets wire it up to connect to <a href="https://ifttt.com" target="_blank" rel="noopener">ifttt.com</a> so you can have infinite integrations. To do this, we need to connect to the <a href="https://ifttt.com/maker" target="_blank" rel="noopener">maker channel</a>.</p>
+<p>Once you connect the maker channel, you should see an auto generated key, save it because you&#39;ll need this later.</p>
+<p>Now click create a new recipe</p>
+<ol>
+<li>Trigger channel should be <code>Maker</code></li>
+<li>Choose trigger should be <code>Receive a web request</code></li>
+<li>Event Name can be whatever you want, but <em>remember the name</em></li>
+<li>Action channel can be whatever you want again. This is the creative part on your end. You can log to a google spreadsheet, post to slack, turn off your harmony tv, whatever you want.</li>
+<li>Follow through to complete the recipe</li>
+</ol>
+<p>Now let&#39;s modify the start up script we wrote previously to trigger ifttt. In my example below, my key is <code>123456</code> and my event name is <code>lights_on</code></p>
+<script src="https://gist.github.com/bd3f26a829c5ec26974b6e92a2323b69.js"></script>
+
+<p>That&#39;s it, reboot the router and press the dash button to test it out!</p>
+<h4 id="Block-all-Internet-access"><a href="#Block-all-Internet-access" class="headerlink" title="Block all Internet access"></a>Block all Internet access</h4><p>The last step is to disable internet access on the dash. This is an optional step, but I like the idea of stopping amazon from doing a firmware update without approval. To do this go to Access Restrictions &gt; WAN access. Then do the following:</p>
+<ol>
+<li>Enable the Policy</li>
+<li>Set Policy Name to <code>no dash internet</code></li>
+<li>Click <code>Deny</code></li>
+<li>Then click <code>Edit List of Clients</code></li>
+<li>Enter the dash&#39;s mac address in the box</li>
+<li>Save then Apply on both pages</li>
+</ol>
+
+
+		</div>
+    </div>
+    <div id="disqus_thread"></div>
+
+
+<script>
+  var disqus_shortname = 'jedbz';
+  
+  var disqus_url = 'https://jed.bz/2016/07/25/Amazon-dash-dd-wrt-and-ifttt/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+                                    
+  </div>
+
+</div>
+<footer class="footer-section blog-footer">
+	<div class="row">
+		<div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+			<p>&copy; 
+				2018 
+				Jed Lippold 
+			</p>
+		</div>
+		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+			<a title="github" target="_blank" href="https://github.com/jlippold"> 
+				<i class="icon icon-github-circled"></i>
+			</a>
+		</div>
+		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+			<a title="linkedin" target="_blank" href="https://www.linkedin.com/in/jedlippold">
+          		<i class="icon icon-linkedin"></i>
+            </a>
+		</div>
+		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+			<a title="twitter" target="_blank" href="https://twitter.com/treason">
+                <i class="icon icon-twitter"></i>
+            </a>
+		</div>
+	</div>
+</footer>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function(event) { 
+
+		function setActive(item) {
+			var items = document.querySelectorAll(item), i;
+			for (i = 0; i < items.length; ++i) {
+			  items[i].className = "active";
+			}
+		}
+		
+ 		var path = window.location.pathname;
+
+ 		if (path == "/") {
+ 			return setActive(".navHome");
+ 		}
+
+ 		if (path.indexOf("/apps") == 0) {
+ 			return setActive(".navApps");
+ 		}
+
+ 		if (path.indexOf("/blog") == 0) {
+ 			return setActive(".navBlog");
+ 		}
+
+ 		if (path.indexOf("/about") == 0) {
+ 			return setActive(".navAbout");
+ 		}
+
+ 		return setActive(".navBlog");
+
+	});
+</script>
+
+ 
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-80304483-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

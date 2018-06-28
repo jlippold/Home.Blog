@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="Jed Lippolds Blog">
+    <meta name="author" content="Jed Lippold">
+    
+
+    <title>Jed.bz</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/pub/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/pub/css/custom.css" rel="stylesheet">
+    <link href="/pub/css/font.css" rel="stylesheet">
+    <link href="/pub/blog/css/blog.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <input type="checkbox" id="navbar-toggle-cbox">
+    <div class="navbar-header">
+      <label for="navbar-toggle-cbox" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </label>
+      <a class="navbar-brand" href="/">
+        <img src="/pub/blog/img/logo.svg" />
+      </a>
+      <div class="navbar-header-menu">
+        <ul class="nav navbar-nav">
+          <li class="navApps">
+            <a href="/apps">Work</a>
+          </li>
+          <li class="navBlog">
+            <a href="/blog">Blog</a>
+          </li>
+          <li class="navAbout">
+            <a href="/about">About</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="navHome">
+          <a href="/">Home</a>
+        </li>
+        <li class="navApps">
+          <a href="/apps">Work</a>
+        </li>
+        <li class="navBlog">
+          <a href="/blog">Blog</a>
+        </li>
+        <li class="navAbout">
+          <a href="/about">About</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="/admin">Admin</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container" style="padding-top: 70px">
+  <div class="row">
+    <div class="blog-main">
+
+		<div class="blog-post">
+			
+			
+
+<div class="blog-sidebar">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            
+            <div class="profile">
+            </div>
+            <h4 id="name">Jed Lippold</h2>
+            <h5 id="title">Father, Developer, Teacher &amp; Entrepreneur</h3>
+            <span id="location">
+              <i class="fa fa-map-marker"></i>
+              Pennsylvania / New York
+            </span>
+            <a id="follow" target="_blank" href="#"></a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block" style="border-right: 1px solid rgba(255, 255, 255, 0.1);">
+                <h3>3</h3>
+                <span>posts</span>
+            </div>
+            <div class="article-info-block">
+                <h3>5</h3>
+                <span>tags</span>
+            </div>
+            <div class="clear clearfix"></div>
+        </div>
+        <div class="profile-block social-links">
+          <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <a href="https://github.com/jlippold" target="_blank" title="github">
+                    <i class="icon icon-github-circled"></i>
+                </a>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <a href="https://www.linkedin.com/in/jedlippold" target="_blank" title="linkedin">
+                    <i class="icon icon-linkedin"></i>
+                </a>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <a href="https://twitter.com/treason" target="_blank" title="twitter">
+                    <i class="icon icon-twitter"></i>
+                </a>
+              </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+			<h2 class="blog-post-title">
+				Kodi in the car
+			</h2>
+			<p class="blog-post-meta">
+				2017-06-24  by Jed Lippold
+			</p>
+			
+			<p>I setup a raspberry pi running kodi: librelec in my car, this is how I did it.</p>
+<a id="more"></a> 
+<p>I live in the sticks, so I do a lot of driving with the kids. I&#39;ve been burning DVD&#39;s for the kids, but it&#39;s such a pain in the ass to author DVDs and they get scratched constantly. So, I decided to make a mobile video player from a raspberry pi.</p>
+<p>Requirements to my build</p>
+<ul>
+<li>Easy to add new movies</li>
+<li>Easy to control from the car</li>
+<li>Automatic playback, and resuming</li>
+</ul>
+<p>Here&#39;s a pic of my final output: </p>
+<h3 id="Parts"><a href="#Parts" class="headerlink" title="Parts"></a>Parts</h3><p>A lot of these items, you may already own so just get creative here</p>
+<pre><code>- [Vilros Raspberry Pi 3 Basic Starter Kit, Black Case](https://www.amazon.com/gp/product/B01DMFQZXK/ref=oh_aui_detailpage_o07_s01?ie=UTF8&amp;psc=1) 
+    - This is the one I bought, but it doesnt matter which one. Just make sure you use a raspberry pi 3, anything earlier is too slow.
+    - This kit comes with a case, charger and heat sinks
+- [3.5mm Plug (4 Pole) To 3 RCA](https://www.amazon.com/gp/product/B0007V6JCK/ref=oh_aui_detailpage_o09_s00?ie=UTF8&amp;psc=1)
+    - I used one I came with my camcorder, so I didnt buy this 
+- [2.5 inch HDD](https://www.amazon.com/gp/product/B01LYNQXCP/ref=oh_aui_detailpage_o07_s00?ie=UTF8&amp;psc=1)
+    - If you have an old laptop around, you can pull out the hard disk and use it for this. I chose a laptop HDD because of the small physical size and high capacity
+- [microSDHC drive](https://www.amazon.com/gp/product/B010Q57T02/ref=oh_aui_detailpage_o07_s00?ie=UTF8&amp;psc=1)
+    - Libreelec says a 8gb minimum, but a 16GB disk is safer.
+- [SATA to USB Cable](https://www.amazon.com/MMNNE-Drive-Adapter-Cable-Supply/dp/B01M03148F/ref=sr_1_45)
+    - You want to be sure that this adapter can pass enough power to the Pi. Either buy an externally powered adapter or use one like above that draws power from 2 usb ports.
+</code></pre><p>Miscellaneous hardware purchased at my local hardware store</p>
+<pre><code>- Wooden Craft board
+- Wire
+- rocker switch
+- extension cord
+- machine screws
+</code></pre><h3 id="Libreelec"><a href="#Libreelec" class="headerlink" title="Libreelec"></a>Libreelec</h3><p>It&#39;s super easy to install libreelec, so I won&#39;t go over that. You basically install it on the SD card, then plug the SD card into the Pi, and boot it up. Here are the <a href="https://libreelec.tv/downloads/" target="_blank" rel="noopener">installation instructions</a></p>
+<p>At this point you should have LibreElec installed on the Pi, with a virgin kodi installation running. You want to plug your pi into your TV at home until you get everything configured. THe last step will be to bring it into the car.</p>
+<p>THe first thing we have to do is configure the Pi to use composite output instead of HDMI. In my honda Pilot, I have AV ports.</p>
+<h3 id="Build"><a href="#Build" class="headerlink" title="Build"></a>Build</h3><p>install libre<br>configure composite out<br>setup external hdd<br>metadata<br>remote control<br>boot scripts<br>portability (the physical build)</p>
+
+
+		</div>
+    </div>
+    <div id="disqus_thread"></div>
+
+
+<script>
+  var disqus_shortname = 'jedbz';
+  
+  var disqus_url = 'https://jed.bz/2017/06/24/Kodi-in-the-car/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+                                    
+  </div>
+
+</div>
+<footer class="footer-section blog-footer">
+	<div class="row">
+		<div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+			<p>&copy; 
+				2018 
+				Jed Lippold 
+			</p>
+		</div>
+		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+			<a title="github" target="_blank" href="https://github.com/jlippold"> 
+				<i class="icon icon-github-circled"></i>
+			</a>
+		</div>
+		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+			<a title="linkedin" target="_blank" href="https://www.linkedin.com/in/jedlippold">
+          		<i class="icon icon-linkedin"></i>
+            </a>
+		</div>
+		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+			<a title="twitter" target="_blank" href="https://twitter.com/treason">
+                <i class="icon icon-twitter"></i>
+            </a>
+		</div>
+	</div>
+</footer>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function(event) { 
+
+		function setActive(item) {
+			var items = document.querySelectorAll(item), i;
+			for (i = 0; i < items.length; ++i) {
+			  items[i].className = "active";
+			}
+		}
+		
+ 		var path = window.location.pathname;
+
+ 		if (path == "/") {
+ 			return setActive(".navHome");
+ 		}
+
+ 		if (path.indexOf("/apps") == 0) {
+ 			return setActive(".navApps");
+ 		}
+
+ 		if (path.indexOf("/blog") == 0) {
+ 			return setActive(".navBlog");
+ 		}
+
+ 		if (path.indexOf("/about") == 0) {
+ 			return setActive(".navAbout");
+ 		}
+
+ 		return setActive(".navBlog");
+
+	});
+</script>
+
+ 
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-80304483-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

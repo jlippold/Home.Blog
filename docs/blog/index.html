@@ -22,8 +22,7 @@
 
   <body>
 
-    <section>
-	<nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <input type="checkbox" id="navbar-toggle-cbox">
     <div class="navbar-header">
@@ -75,128 +74,13 @@
   </div>
 </nav>
 
-</section>
-
-<section class="content-section video-section">
-	<video muted loop autoplay class="video" id="backgroundVideo">
-		<source src="/video/cora.mp4" type="video/mp4">
-		<source src="/video/cora.webm" type="video/webm">
-		<source src="/video/cora.ogv" type="video/ogg">
-	</video>
-	<canvas class="canvas" id="canvas" style="display: none"></canvas>
-	<div class="flex-center">
-		<p class="overlay">
-			My name is Jed Lippold.
-			<br />
-			I'm a father, developer, teacher
-			<br />
-			and entrepreneur.
-			<div class="read-more">
-				<a href="/about" class="btn btn-white btn-lg">Read more</a>
-			</div>	
-		</p>
-	</div>
-</section>
-
-<section class="content-section work-section">
-	<h1>Recent Work</h1>
-
-	<div class="row" style="padding: 20px;">
-
-		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-		    <div class="hovereffect">
-		        <img class="img-responsive" src="/pub/blog/img/skedula.png" alt="">
-		        <div class="overlay">
-					<a class="info" href="/apps/datacation.html">
-						<div class="linktext">
-							Skedula
-						</div>
-					</a>
-				</div>
-		    </div>
-		</div>
-
-		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-		    <div class="hovereffect">
-		        <img class="img-responsive" src="/pub/blog/img/dtv.png" alt="">
-		        <div class="overlay">
-					<a class="info" href="/apps/coco.html">
-						<div class="linktext">
-							Coco
-						</div>
-					</a>
-				</div>
-		    </div>
-		</div>
-
-		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-		    <div class="hovereffect">
-		        <img class="img-responsive" src="/pub/blog/img/gesturePad.jpg" alt="">
-		        <div class="overlay">
-					<a class="info" href="/apps/gesturePad.html">
-						<div class="linktext">
-							gesturePad
-						</div>
-					</a>
-				</div>
-		    </div>
-		</div>
-
-	</div>
-	
-	<div class="read-more">
-		<a href="/apps" class="btn btn-white btn-lg">Other apps</a>
-	</div>
-</section>
-
-<section class="content-section blog-section">
-  <h1>Blog Posts</h1>
-  <div class='row'>
-  	<ul class="blog-posts">
+<div class="container" style="padding-top: 70px">
+  <div class="row">
+    <div class="blog-main">
+		<h2>Blog Posts</h2>
+		<p>&nbsp;</p>
+		<ul class="blog-posts list">
 	 	
-	 		
-				<li>
-					<div class="post-date">
-						<p>
-							24
-							<span>Jun</span>
-						</p>
-					</div>
-					<div class="post-content">
-						<h2>
-							<a href="/2017/06/24/Kodi-in-the-car/">
-								Kodi in the car
-							</a>
-						</h2>
-						<p>
-							<p>I setup a raspberry pi running kodi: librelec in my car, this is how I did it.</p>
-						</p>
-					</div>
-				</li>
-			
-		
-	 		
-				<li>
-					<div class="post-date">
-						<p>
-							24
-							<span>Jun</span>
-						</p>
-					</div>
-					<div class="post-content">
-						<h2>
-							<a href="/2017/06/24/Ring-doorbell-Kodi-add-on/">
-								Ring doorbell Kodi add-on
-							</a>
-						</h2>
-						<p>
-							<p>Kodi integration of Ring.com video.</p>
-						</p>
-					</div>
-				</li>
-			
-		
-	 		
 				<li>
 					<div class="post-date">
 						<p>
@@ -205,26 +89,61 @@
 						</p>
 					</div>
 					<div class="post-content">
-						<h2>
+						<h3>
 							<a href="/2016/07/25/Amazon-dash-dd-wrt-and-ifttt/">
 								Amazon Dash, DD-WRT and IFTTT
 							</a>
-						</h2>
+						</h3>
 						<p>
 							<p>I snagged some amazon dash buttons on Prime day for $0.99 a piece. I saw some other hacks that required a full time server, here&#39;s a way to do it with only dd-wrt.</p>
 						</p>
 					</div>
 				</li>
-			
 		
-  	</ul>
+				<li>
+					<div class="post-date">
+						<p>
+							24
+							<span>Jun</span>
+						</p>
+					</div>
+					<div class="post-content">
+						<h3>
+							<a href="/2017/06/24/Kodi-in-the-car/">
+								Kodi in the car
+							</a>
+						</h3>
+						<p>
+							<p>I setup a raspberry pi running kodi: librelec in my car, this is how I did it.</p>
+						</p>
+					</div>
+				</li>
+		
+				<li>
+					<div class="post-date">
+						<p>
+							24
+							<span>Jun</span>
+						</p>
+					</div>
+					<div class="post-content">
+						<h3>
+							<a href="/2017/06/24/Ring-doorbell-Kodi-add-on/">
+								Ring doorbell Kodi add-on
+							</a>
+						</h3>
+						<p>
+							<p>Kodi integration of Ring.com video.</p>
+						</p>
+					</div>
+				</li>
+		
+		</ul>
+		
+    </div>
   </div>
-	<div class="read-more">
-		<a href="/blog" class="btn btn-black btn-lg">More thoughts</a>
-	</div>
-</section>
-
-<section class="content-section footer-section">
+</div>
+<footer class="footer-section blog-footer">
 	<div class="row">
 		<div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
 			<p>&copy; 
@@ -248,36 +167,42 @@
             </a>
 		</div>
 	</div>
-</section>
-
-<script type="text/javascript" src="/pub/blog/canvas-video-player.js" ></script>
+</footer>
 
 <script>
 	document.addEventListener("DOMContentLoaded", function(event) { 
-		document.querySelectorAll(".navHome")[0].className = "active";
-		var isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
-		if (isIOS) {
-		    // Init CanvasVideoPlayer here
-		    document.getElementById("canvas").style.display = "block";
-		    new CanvasVideoPlayer({
-		        videoSelector: '.video',
-		        canvasSelector: '.canvas',
-		        timelineSelector: false,
-		        framesPerSecond: 29,
-		        audio: false,
-		        resetOnLastFrame: true,
-		        autoplay: true,
-		        loop: true,
-		        pauseOnClick: false,
-		        audio: false
-		    });
+
+		function setActive(item) {
+			var items = document.querySelectorAll(item), i;
+			for (i = 0; i < items.length; ++i) {
+			  items[i].className = "active";
+			}
 		}
+		
+ 		var path = window.location.pathname;
+
+ 		if (path == "/") {
+ 			return setActive(".navHome");
+ 		}
+
+ 		if (path.indexOf("/apps") == 0) {
+ 			return setActive(".navApps");
+ 		}
+
+ 		if (path.indexOf("/blog") == 0) {
+ 			return setActive(".navBlog");
+ 		}
+
+ 		if (path.indexOf("/about") == 0) {
+ 			return setActive(".navAbout");
+ 		}
+
+ 		return setActive(".navBlog");
+
 	});
-
-
-
 </script>
 
+ 
 
     
     <script>
