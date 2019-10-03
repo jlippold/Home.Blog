@@ -14,7 +14,7 @@ layout: apps
 
 ### Open source, miscellaneous projects
 
- - [tweakCompatible](https://github.com/jlippold/tweakCompatible) - Adds a compatibility checker for jailbroken apple devices. 
+ - [tweakCompatible](https://jlippold.github.io/tweakCompatible/) - Adds a compatibility checker for jailbroken apple devices. 
 
  - [Coco for DirecTV](/apps/coco.html) - An advanced remote control for DirecTV
 
